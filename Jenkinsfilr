@@ -5,6 +5,7 @@
 def tools = new org.devops.tools()
 
 string workspace = "/opt/jenkins/wordspace"  // 自定义工作目录
+hello()
 pipeline {
     // ========agent语句块开始========
     agent {
