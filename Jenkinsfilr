@@ -25,7 +25,7 @@ pipeline {
     // ============stages语句块开始《一个或多个》====================
     stages {
         stage("GetCode"){  // 这是第一个小阶段的名称
-            when { environment name:"rocco",value: "texttt"}
+            //when { environment name:"rocco",value: "texttt"}  //跳过当前步骤
             steps{  // 步骤
                 timeout(time:5,unit:"MINUTES"){  // 步骤超时时间
                     script{  // 填写运行代码
