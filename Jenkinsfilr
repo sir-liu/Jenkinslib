@@ -30,7 +30,9 @@ pipeline {
                 timeout(time:5,unit:"MINUTES"){  // 步骤超时时间
                     script{  // 填写运行代码
                         println("获取代码")
-                        sh "/usr/bin/df -h"
+                        tools.PrintMes("获取代码","green")
+                        // sh "/usr/bin/df -h"
+                        // sh "/usr/bin/pwd"
                         input id: '007', message: '是否要继续', parameters: [choice(choices: ['a', 'b'], description: '', name: '请选择')], submitter: 'admin'
                     }
                 }
@@ -47,7 +49,9 @@ pipeline {
                         timeout(time:20, unit:"MINUTES"){
                             script{
                                 println("应用打包")
-                             
+                                tools.PrintMes("获取代码","green")
+                                sh "/usr/bin/pwd"
+                                sh "/usr/bin/df -h"
                             }
                         }
                     }
@@ -58,8 +62,7 @@ pipeline {
                         timeout(time:30, unit:"MINUTES"){
                             script{
                                 print("代码扫描")
-
-                                tools.PrintMes("this is my lib!")
+                                tools.PrintMes("代码扫描","green")
                             }
                         }
                     }
