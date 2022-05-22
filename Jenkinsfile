@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('jenkinslib') _  //引用Library
+@Library('Jenkinslib') _  //引用Library
 def tools = new org.devops.tools()  // 指的就是org/devops/tools.groovy
 
 
