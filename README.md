@@ -1,2 +1,0 @@
-# Jenkinslib
-Jenkins share library
